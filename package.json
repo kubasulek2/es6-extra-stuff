@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/kubasulek2/es6-extra-stuff#readme",
   "dependencies": {
-    "nodemon": "^2.0.2",
-    "eslint": "^6.7.2"
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "nodemon": "^2.0.2"
   }
 }
