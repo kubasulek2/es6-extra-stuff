@@ -12,7 +12,6 @@
 
 * Generator is a function that can by executed in steps.
 * generators have a "*" after "function" keyword and before function name.
-* "yield" is a keyword
-* 
-* 
-* 
+* "yield" is a keyword for generator. yield is like return but may appear many times.
+* generator return an iterator can be looped or handled with next() calls
+* generator apart of next have also throw() and return() methods to handle it differently.
