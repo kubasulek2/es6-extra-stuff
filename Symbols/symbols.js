@@ -74,6 +74,22 @@ let p = new Person();
 console.log();
 console.log(p.toString()); // [object Validator]
 
+// Symbol.toPrimitive
+
+
+let arr = [1, 2, 3];
+
+console.log(arr + 1); // "1,2,31"
+
+arr[Symbol.toPrimitive] = function () {
+	return this.reduce((p, n) => p + n, 0);
+};
+
+// the same as arr.valueOf = func... | Symbol.toPrimitive is just more general and is used in all coercion types.
+
+console.log(arr + 1); // 7
+
+
 /*
 Well-know Symbols:
 
