@@ -19,7 +19,7 @@ console.log(deck);
 console.log(deck.size); // 2;
 
 // override value
-deck.set('kc', {a: 2});
+deck.set('kc', { a: 2 });
 
 // size stay the same
 console.log(deck.size); // 2;
@@ -61,5 +61,3 @@ for (let map of deck.entries()) {
 
 // map for each
 deck.forEach(el => el.checked = true);
-
-console.log(deck instanceof Map && deck instanceof Object);
