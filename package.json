@@ -1,0 +1,23 @@
+{
+  "name": "es6-extra-stuff",
+  "version": "1.0.0",
+  "description": "symbols, proxies, iterators, generators, maps and sets",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubasulek2/es6-extra-stuff.git"
+  },
+  "author": "kubasulek2 <kubasulek2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kubasulek2/es6-extra-stuff/issues"
+  },
+  "homepage": "https://github.com/kubasulek2/es6-extra-stuff#readme",
+  "dependencies": {
+    "nodemon": "^2.0.2",
+    "eslint": "^6.7.2"
+  }
+}
