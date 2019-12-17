@@ -6,7 +6,7 @@ function* generator () {
 
 const it = generator(); // generator returns an iterator object.
 console.log(it.next()); // { value: 'House', done: false }
-console.log(it.next()); // { value: 'House', done: false } 
+console.log(it.next()); // { value: 'Garage', done: false } 
 console.log(it.next()); // { value: undefined, done: true }
 
 
@@ -37,12 +37,12 @@ function* gen2 (end) {
 }
 let it2 = gen2(10);
 
-// actually you can iterate it, but cant create an array, like with object containing iterator.
+// you can iterate it,  or create an array but after its done cant do it again, so either iteration or array.
 for (const el of it2) {
 	console.log(el); // work
 }
 
-let myArr = [...it2]; // doesn't work:(
+let myArr = [...it2]; // doesn't work iterator has finished in the loop above.
 
 
 // controlling iterators with throw
@@ -64,13 +64,13 @@ function* gen3 (end) {
 let it3 = gen3(5);
 
 console.log(it3.next());
-console.log(it3.throw('Error Here'));
-console.log(it3.return(('Error Here'))); // or return here to set value to 'Error Here' and done to true 
+console.log(it3.throw('Error Here')); // can be caught with try catch statement, but iteration goes forth;
+console.log(it3.return(('Finished'))); // return to set value to 'Finished' and iterator is finished {done: false, value: undefined} 
 console.log(it3.next());
 console.log(it3.next());
 
 
-/* Passing numbers to generators */
+/* Passing values to generators */
 
 function* fibonacci (n = 0) {
 	let n2 = n + 1;
@@ -92,7 +92,7 @@ console.log(getFibonacci.next().value); // 5
 console.log(getFibonacci.next().value); // 8
 console.log(getFibonacci.next().value); // 13
 console.log(getFibonacci.next().value); // 21
-console.log(getFibonacci.next(true).value); // passing value here | 0
+console.log(getFibonacci.next(true).value); // passing value here // 0
 console.log(getFibonacci.next().value); // 1
 
 
@@ -106,7 +106,7 @@ let obj2 = {
 
 console.log(obj2.generator().next()); // property generator;
 
-/* yield* */
+/* yield* - array of yields */
 
 let obj3 = {
 	* generator () {
