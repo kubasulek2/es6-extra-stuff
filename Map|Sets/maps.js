@@ -61,3 +61,16 @@ for (let map of deck.entries()) {
 
 // map for each
 deck.forEach(el => el.checked = true);
+
+
+/* Weak maps */
+
+let weakMap = new WeakMap();
+
+let obj = { a: 1 };
+
+weakMap.set(obj, 'hello');
+console.log(weakMap.get(obj));
+
+obj = null;
+/* from now weakMap is empty */

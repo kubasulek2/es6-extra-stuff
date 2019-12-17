@@ -10,11 +10,12 @@
 # WeakMap
 
 * weakMaps keys must be objects!!
-* because of that(objects are referenced types) properties of weakMaps can be automatically garbage collected if not used any more.
+* keys of the weakMap are loosely referenced, which means that when you erase other references to object underlying a key key-value pair gets erased
+* weakMap interface is poorer - only get, set, has, delete. 
 
 # Sets:
 
-* 
+* sets are array-like object that holds only unique values
 * 
 * 
 * 
