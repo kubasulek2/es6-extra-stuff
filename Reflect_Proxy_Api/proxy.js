@@ -67,7 +67,7 @@ fnProxy('Hello'); // Hello
 fnProxy(); // This function must have exactly one argument.
 
 /* Revocable proxy */
-const rvcPerson= {
+const rvcPerson = {
 	age: 22,
 	name: 'Anne'
 };
