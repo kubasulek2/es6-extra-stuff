@@ -16,8 +16,11 @@
 # Sets:
 
 * sets are array-like object that holds only unique values
-* 
-* 
-* 
-* 
-* 
+* set.keys() and set.values() are the same
+* however in for el of set loop only one of key or value(since they are the same) is displayed.  
+
+# WeakSet
+
+* weakSets stores only objects.
+* weakSet API has only: "add", "delete" and "has" methods
+* weakSet value is also garbage collected if there is no other reference to it.
